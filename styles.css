@@ -1,0 +1,28 @@
+:root{
+    --main-100:rgb(22, 26, 48);
+    --main-200:rgb(36,37,63);
+    --main-300:rgb(49, 48, 77);
+    --accent-800:rgb(182, 187, 196);
+    --accent-900:rgb(240, 236, 229);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:var(--main-100);
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: space-between;
+}
+main{
+    background:var(--main-300);
+    grid-area: 3/2/3/3;
+}
+footer{
+    background: var(--main-300);
+    width: 90dvw;
+    height: max(70dvh,500px);
+}

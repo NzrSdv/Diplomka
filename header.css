@@ -1,0 +1,78 @@
+header{
+    color:var(--accent-900);
+    width:100dvw;
+    height: 12dvh;
+    background: var(--main-300);
+    display: flex;
+    justify-content: space-between;
+}
+.Left, .Right{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Left{
+    padding:0 20px 0 0;
+    transition:.2s ease;
+}
+#Name{
+    pointer-events: none;
+}
+#Person{
+    height: inherit;
+    aspect-ratio: 1;
+    background:var(--accent-900) ;
+    mask:url(./media/personAdda.svg) center no-repeat;
+    mask-size: 80%;
+}
+#Search{
+    height: inherit;
+    aspect-ratio: 1;
+    background:var(--main-300);
+    align-items: center;
+    transition: ease .2s;
+}
+.SearchIcon{
+    height: inherit;
+    aspect-ratio: 1;
+    background:var(--accent-900);
+    mask:url(./media/SearchIco.svg) center no-repeat;
+    mask-size: 80%;
+    transition:inherit;
+}
+
+#Search:hover{
+    background: var(--main-200);
+}
+#Search:hover .SearchIcon{
+    background: var(--accent-800);
+}
+
+
+#Settings{
+    height: inherit;
+    aspect-ratio: 1;
+    background:var(--main-300);
+    align-items: center;
+    transition: ease .2s;
+}
+.SettingsIcon{
+    height: inherit;
+    aspect-ratio: 1;
+    background:var(--accent-900);
+    mask:url(./media/SettingsIco.svg) center no-repeat;
+    mask-size: 80%;
+    transition: inherit;
+}
+
+#Settings:hover{
+    background:var(--main-200);
+}
+#Settings:hover .SettingsIcon{
+ background:var(--accent-800);
+}
+
+.Left:hover{
+    background-color: var(--main-200);
+}
