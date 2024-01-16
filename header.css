@@ -1,20 +1,28 @@
 header{
     color:var(--accent-900);
-    width:100dvw;
+    width:var(--windowWidth);
     height: 12dvh;
     background: var(--main-300);
     display: flex;
     justify-content: space-between;
+    border-radius: var(--borderRadius);
+    padding: 10px;
+    align-items: center;
 }
 .Left, .Right{
-    height: inherit;
+    height: 10dvh;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .Left{
-    padding:0 20px 0 0;
+    aspect-ratio: 1;
+    flex-direction: column;
     transition:.2s ease;
+    border-radius: var(--borderRadius);
+}
+.Right{
+    gap:5px;
 }
 #Name{
     pointer-events: none;
@@ -32,6 +40,7 @@ header{
     background:var(--main-300);
     align-items: center;
     transition: ease .2s;
+    border-radius: var(--borderRadius);
 }
 .SearchIcon{
     height: inherit;
@@ -56,6 +65,7 @@ header{
     background:var(--main-300);
     align-items: center;
     transition: ease .2s;
+    border-radius: var(--borderRadius);
 }
 .SettingsIcon{
     height: inherit;
