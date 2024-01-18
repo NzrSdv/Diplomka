@@ -1,9 +1,8 @@
 :root{
-    --main-100:rgb(53, 47, 68);
-    --main-200:rgb(73,66,90 );
-    --main-300:rgb(92, 84, 112);
-    --main-600:rgb(150,142,170);
-    --accent-800:rgb(185, 180, 199);
+    --main-100:#F9F9F9;
+    --main-200:#7FC8F8;
+    --main-300:#5AA9E6;
+    --accent-800:rgb(240, 237, 207);
     --accent-900:rgb(250, 240, 230);
     --maskSize:60%;
     --borderRadius:10px;
@@ -18,7 +17,7 @@ body{
     background:var(--main-100);
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap:30px;
     justify-content: space-evenly;
     align-items: center;
     padding:10px;
@@ -52,10 +51,10 @@ main{
     display: flex;
     gap:50px;
     align-items: center;
-    overflow-x: scroll;
+    overflow-x: auto;
+    padding:0 50px 20px;
 }
 .tovar{
-    background: var(--main-600);
     border: 2px solid var(--accent-900);
     border-radius: var(--borderRadius);
     height: 100%;
@@ -102,10 +101,10 @@ main{
 .Add{
     aspect-ratio: 1;
     height: 70%;
-    border-radius: var(--borderRadius);
-    background:var(--main-600);
+    border-radius: calc(var(--borderRadius) * 1.5);
+    background:var(--main-300);
     outline: none;
-    border: 5px solid var(--main-200);
+    border: 2px solid var(--main-200);
 }
 .text{
     align-self: center;
