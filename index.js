@@ -1,12 +1,11 @@
-const btnCheck = () =>{
-    console.log("Click")
-}
+const ProfileBtn = document.querySelector(".Left");
+const SearchBtn = document.querySelector("#Search");
+const SettingsBtn = document.querySelector("#Settings");
 
-document.querySelector(".Left").addEventListener("click" , btnCheck);
-document.querySelector("#Search").addEventListener("click" , btnCheck);
-document.querySelector("#Settings").addEventListener("click" , btnCheck);
-
-
+ProfileBtn.addEventListener('click',() => {
+    window.location.href = "Sign.html"
+})
+//Slider
 const slider = document.querySelector(".ScrollMenu");
 let isDown = false;
 let startX;
@@ -31,5 +30,4 @@ slider.addEventListener('mousemove',(e) => {
     const x = e.pageX - slider.offsetLeft;
     const walk = (x - startX);
     slider.scrollLeft = scrollLeft - walk;
-
 })

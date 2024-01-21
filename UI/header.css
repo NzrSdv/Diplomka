@@ -31,7 +31,7 @@ header{
     height: inherit;
     aspect-ratio: 1;
     background:var(--accent-900) ;
-    mask:url(./media/personAdda.svg) center no-repeat;
+    mask:url(../media/personAdda.svg) center no-repeat;
     mask-size: var(--maskSize);
 }
 #Search{
@@ -46,7 +46,7 @@ header{
     height: inherit;
     aspect-ratio: 1;
     background:var(--accent-900);
-    mask:url(./media/SearchIco.svg) center no-repeat;
+    mask:url(../media/SearchIco.svg) center no-repeat;
     mask-size: var(--maskSize);
     transition:inherit;
 }
@@ -71,7 +71,7 @@ header{
     height: inherit;
     aspect-ratio: 1;
     background:var(--accent-900);
-    mask:url(./media/SettingsIco.svg) center no-repeat;
+    mask:url(../media/SettingsIco.svg) center no-repeat;
     mask-size: var(--maskSize);
     transition: inherit;
 }
