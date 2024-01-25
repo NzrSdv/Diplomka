@@ -1,3 +1,4 @@
+//Buttons 
 const ProfileBtn = document.querySelector(".Left");
 const SearchBtn = document.querySelector("#Search");
 const SettingsBtn = document.querySelector("#Settings");
@@ -5,6 +6,8 @@ const SettingsBtn = document.querySelector("#Settings");
 ProfileBtn.addEventListener('click',() => {
     window.location.href = "Sign.html"
 })
+
+
 //Slider
 const slider = document.querySelector(".ScrollMenu");
 let isDown = false;
