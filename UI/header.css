@@ -31,7 +31,7 @@ header{
     height: inherit;
     aspect-ratio: 1;
     background:var(--accent-900) ;
-    mask:url(./media/personAdda.svg) center no-repeat;
+    mask:url(../media/SVGS/personAdda.svg) center no-repeat;
     mask-size: var(--maskSize);
 }
 #Search{
@@ -46,7 +46,7 @@ header{
     height: inherit;
     aspect-ratio: 1;
     background:var(--accent-900);
-    mask:url(./media/SearchIco.svg) center no-repeat;
+    mask:url(../media/SVGS/SearchIco.svg) center no-repeat;
     mask-size: var(--maskSize);
     transition:inherit;
 }
@@ -59,7 +59,7 @@ header{
 }
 
 
-#Settings{
+#Cart{
     height: inherit;
     aspect-ratio: 1;
     background:var(--main-300);
@@ -67,19 +67,19 @@ header{
     transition: ease .2s;
     border-radius: var(--borderRadius);
 }
-.SettingsIcon{
+.CartIcon{
     height: inherit;
     aspect-ratio: 1;
     background:var(--accent-900);
-    mask:url(./media/SettingsIco.svg) center no-repeat;
+    mask:url(../media/SVGS/ShoppingCartIco.svg) center no-repeat;
     mask-size: var(--maskSize);
     transition: inherit;
 }
 
-#Settings:hover{
+#Cart:hover{
     background:var(--main-200);
 }
-#Settings:hover .SettingsIcon{
+#Cart:hover .CartIcon{
  background:var(--accent-800);
 }
 

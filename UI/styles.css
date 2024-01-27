@@ -8,13 +8,20 @@
     --borderRadius:10px;
     --windowWidth:90dvw;
 }
+@font-face{
+    font-family: 'Montserrat';
+    src: url("../media/Fonts/Montserrat/static/Montserrat-Regular.ttf") format('truetype');
+}
 *{
+    font-family: 'Montserrat';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
     background:var(--main-100);
+}
+#MainPage{
     display: flex;
     flex-direction: column;
     gap:30px;
@@ -93,7 +100,7 @@ main{
 .addicon{
     aspect-ratio: 1;
     background:var(--accent-900);
-    mask: url(./media/AddCircle.svg) no-repeat center;
+    mask: url(../media/SVGS/AddCircle.svg) no-repeat center;
     mask-size: calc(var(--maskSize) - 10%);
     align-self: center;
     border: 5px solid var(--main-200);
