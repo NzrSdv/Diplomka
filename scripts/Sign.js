@@ -1,17 +1,6 @@
-//node js fs import 
-import * as fs from "../node_modules/fs";
-
-
-const data = fs.readFile("../Data.txt",function(error,data){
-    if(error){
-        return console.log(error);
-    }
-    console.log(data.toString())
-})
-console.log(data)
 
 //Input animations
-let inputs = document.querySelectorAll("input");
+let inputs = window.document.querySelectorAll("input");
 inputs.forEach((element) => {
     let parent = element.parentElement;
 
@@ -25,13 +14,12 @@ inputs.forEach((element) => {
     })
 })
 
-//Buttons clicks and checks
 
-let button = document.getElementById("SignIn");
-button.addEventListener("click", (e) => {
-    e.preventDefault();
-    for(let i = 0; i < inputs.length; i++)
-    {
-        console.log(inputs[i].value)
-    }
+let SignUpButton = document.getElementById("SignUp");
+SignUpButton.addEventListener("click", () =>{
+    inputs.forEach(element => {
+        localStorage.setItem(element.id,element.value);
+    })
+    localStorage['Signed'] = true;
+    window.location.href = 'index.html';
 })

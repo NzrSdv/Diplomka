@@ -1,10 +1,41 @@
+function signCheck(){
+    console.log("tut");
+    if(localStorage['Login'] != null){
+        localStorage['Signed'] = true;
+    }
+    if(localStorage['Signed']){
+        personStyles(true)
+    }
+    else{
+        personStyles(false);
+        localStorage.setItem('Signed',false);
+    }}
+function personStyles(isIn){
+    let person = document.getElementById("Person");
+    let labelka = document.getElementById("Name");
+    if(isIn){
+        labelka.innerText =  localStorage.getItem("Login");
+        person.style.mask = "url(../media/SVGS/persona.svg) center no-repeat";
+    }
+    else{
+    labelka.innerText = "Регистрация";
+    person.style.mask = "url(../media/SVGS/personAdda.svg) center no-repeat";
+    }
+    person.style.maskSize = "var(--maskSize)";
+}
 //Buttons 
 const ProfileBtn = document.querySelector(".Left");
 const SearchBtn = document.querySelector("#Search");
-const SettingsBtn = document.querySelector("#Settings");
+const CartBtn = document.querySelector("#Cart");
 
 ProfileBtn.addEventListener('click',() => {
-    window.location.href = "Sign.html"
+    console.log("CLICK")
+    if(localStorage['Signed']){
+        window.location.href = "Person.html";
+    }
+    else{
+        window.location.href = "SignUp.html";
+    }
 })
 
 

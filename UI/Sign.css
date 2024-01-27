@@ -21,6 +21,9 @@ body{
 h2{
     margin: 50px;
 }
+a{
+    font-size: .9rem;
+}
 input{
     outline: none;
     border-style: none;
