@@ -4,7 +4,7 @@ function signCheck(){
         localStorage['Signed'] = true;
     }
     if(localStorage['Signed']){
-        personStyles(true)
+        personStyles(true);
     }
     else{
         personStyles(false);
@@ -38,6 +38,14 @@ ProfileBtn.addEventListener('click',() => {
     }
 })
 
+CartBtn.addEventListener("click", () => {
+    if(localStorage['Signed']){
+        window.location.href = "Cart.html";
+    }
+    else{
+        window.location.href = "SignUp.html";
+    }
+})
 
 //Slider
 const slider = document.querySelector(".ScrollMenu");
