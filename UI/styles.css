@@ -19,6 +19,8 @@
 }
 body {
     background:var(--main-100);
+    padding:10px;
+    gap:30px;
 }
 body > *{
     font-family: 'Montserrat';
@@ -26,10 +28,8 @@ body > *{
 #MainPage{
     display: flex;
     flex-direction: column;
-    gap:30px;
     justify-content: space-evenly;
     align-items: center;
-    padding:10px;
 }
 main{
     width:var(--windowWidth);

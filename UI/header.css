@@ -24,17 +24,17 @@ header{
 .Right{
     gap:5px;
 }
-#Name{
+.Name{
     pointer-events: none;
 }
-#Person{
+.Person{
     height: inherit;
     aspect-ratio: 1;
     background:var(--accent-900) ;
     mask:url(../media/SVGS/personAdda.svg) center no-repeat;
     mask-size: var(--maskSize);
 }
-#Search{
+.Search{
     height: inherit;
     aspect-ratio: 1;
     background:var(--main-300);

@@ -8,18 +8,44 @@
     <link rel="stylesheet" href="../UI/Cart.css">
     <link rel="stylesheet" href="../UI/header.css">
 </head>
-<body>
+<body onload="CartCheck()">
     <header>
+        <div class="Left">
+            <div class="Person"></div>
+            <h5 class="Name"></h5>
+        </div>
+        <div class="Right">
 
+            <div class="Home" onclick="Home()">
+                <div class="icon"></div>
+            </div>
+        </div>
     </header>
     <main>
         <div class="up">
             <h3>Корзина</h3>
-            <div class="gridButtons"></div>
+            <div class="Right">
+                <div class="Search">
+                    <div class="SearchIcon"></div>
+                </div>
+                <div class="gridButtons">
+                    <button class="Rows Pushed">
+                        <div class="icon"></div>
+                    </button>
+                    <button class="TwoInRow ">
+                        <div class="icon"></div>
+                    </button>
+                    <button class="ThreeInRow">
+                        <div class="icon"></div>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="cartGrid">
-            
+        <div id="cartGrid">
         </div>
     </main>
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/Cart.js"></script>
+    <script src="../scripts/functions.js"></script>
 </body>
 </html>
