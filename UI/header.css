@@ -51,10 +51,10 @@ header{
     transition:inherit;
 }
 
-#Search:hover{
+.Search:hover{
     background: var(--main-200);
 }
-#Search:hover .SearchIcon{
+.Search:hover .SearchIcon{
     background: var(--accent-800);
 }
 

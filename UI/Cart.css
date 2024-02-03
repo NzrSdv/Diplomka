@@ -33,65 +33,6 @@ main{
     align-items: stretch;
     padding: 10px 15px;
 }
-.up{
-    display: flex;
-    justify-content: space-between;
-}
-.gridButtons{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.gridButtons > button{
-    width: 5dvw;
-    aspect-ratio: 1;
-    border:2px solid var(--main-200);
-    border-radius: calc(var(--borderRadius));
-    align-items: center;
-    transition: ease .2s;
-}
-button{
-    background:var(--main-300)
-}
-.gridButtons button:hover{
-    background: var(--main-200);
-}
-.Rows .icon{
-    aspect-ratio: 1;
-    background:var(--accent-900);
-    mask:url(../media/SVGS/GridOne.svg) no-repeat center;
-    mask-size: calc(var(--maskSize) * 1.1);
-    border: 5px solid var(--main-200);
-}
-.TwoInRow .icon{
-    aspect-ratio: 1;
-    background:var(--accent-900);
-    mask:url(../media/SVGS/GridTwo.svg) no-repeat center;
-    mask-size: calc(var(--maskSize) * 1.1);
-    border: 5px solid var(--main-200);
-}
-.ThreeInRow .icon{
-    aspect-ratio: 1;
-    background:var(--accent-900);
-    mask:url(../media/SVGS/GridThree.svg) no-repeat center;
-    mask-size: calc(var(--maskSize) * 1.1);
-    border: 5px solid var(--main-200);
-}
-.Pushed{
-    background: var(--main-200);
-}
-#cartGrid{
-    display: grid;
-    width: 100%;
-    min-height: 80%;
-    grid-template-rows: 1;
-    grid-template-columns: 1fr;
-    gap:20px;
-    padding:10px;
-    grid-template-rows: auto;
-    justify-items: center;
-    align-items: center;
-}
 h2{
     align-items: center;
 }
