@@ -8,6 +8,8 @@ function signCheck(){
         personStyles(false);
         localStorage['Signed'] = false;
     }}
+
+
 function personStyles(isIn){
     let person = document.querySelector(".Person");
     let labelka = document.querySelector(".Name");
@@ -24,10 +26,23 @@ function personStyles(isIn){
     person.style.maskSize = "var(--maskSize)";
 }
 
+
+function Zapolnenie(){
+    const ulka = document.getElementById("PersonList");
+    let List = ulka.children;
+    let keys = ["Login","Password","PhoneNumber"];
+    for(let i = 0; i < List.length; i++){
+        List[i].innerHTML = "<h5>"+ keys[i] + " : "+ localStorage.getItem(keys[i]) + "</h5>";
+        signCheck();  
+    }
+}
+
+
 function Home(){
     window.location.href = "index.html";
 }
 
+    
 function CartCheck(){
     personStyles(true);
     if(localStorage.getItem("Cart") == null){

@@ -19,15 +19,16 @@ ul{
     justify-content: space-evenly;
     align-items: center;
 }
-#Main{
+.ToMain{
     padding: 15px ;
     outline: none;
+    height: 10dvh;
     border-radius: var(--borderRadius);
     background-color: var(--main-300);
     border: solid 2px var(--main-200);
     color:var(--accent-900);
     transition:ease .2s ;
 }
-#Main:hover{
+.ToMain:hover{
     background-color: var(--main-200);
 }

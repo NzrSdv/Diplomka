@@ -5,24 +5,6 @@ body{
     align-items: center;
     justify-content: space-around;
 }
-.Home{
-    height: 10dvh;
-    aspect-ratio: 1;
-    background-color: var(--main-300);
-    border-radius: calc(var(--borderRadius));
-    align-items: center;
-    transition: ease .2s;
-}
-.Home .icon{
-    aspect-ratio: 1;
-    background:var(--accent-900);
-    mask:url(../media/SVGS/HomeIco.svg) no-repeat center;
-    mask-size: var(--maskSize);
-    border: 5px solid var(--main-200);
-}
-.Home:hover{
-    background: var(--main-200);
-}
 main{
     height: 80dvh;
     background-color: var(--main-300);
