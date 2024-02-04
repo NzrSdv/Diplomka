@@ -96,9 +96,9 @@ button{
 .Grid{
     display: grid;
     width: 100%;
-    min-height: 80%;
+    min-height: 60dvh;
     grid-template-columns: 1fr;
-    gap:40px;
+    gap: clamp(30px,5rem,5dvw);
     padding:10px;
     grid-template-rows: auto;
     justify-content: center;
@@ -107,13 +107,21 @@ button{
 }
 .tovar{
     width:100%;
+    max-height:20dvh;
+    min-height: 300px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+    border: 2px solid var(--main-200);
+    border-radius: var(--borderRadius);
+    padding:40px;
+}
+.Top{
+    height: 70%;
 }
 .imgshka{
-    height: 240px;
+    height:inherit;
     align-self: center;
     aspect-ratio: 1;
     background:var(--accent-800);
@@ -121,15 +129,16 @@ button{
     border:solid 2px var(--main-200);
     cursor:default;
 }
-/* .Top{
-    align-items: center;
-    justify-content: center;
-} */
-.Bottom{
-    width: 100%;
+.Center{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+.Bottom{
+    font-size: clamp(.9rem,1rem,1.3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 .productLabel{  
@@ -143,10 +152,16 @@ button{
     align-self: center;
     border: 5px solid var(--main-200);
 }
+.bottomRow{
+    padding:10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .Add{
     aspect-ratio: 1;
-    height:minmax(200px,20dvh);
-    border-radius: calc(var(--borderRadius) * 1.5);
+    height:40px;
+    border-radius: calc(var(--borderRadius));
     background:var(--main-300);
     outline: none;
     border: 2px solid var(--main-200);
@@ -160,5 +175,8 @@ button{
     .gridButtons{
         display: none;
     }
-    
+    .tovar{
+        font-size: .7rem;
+        max-height:20dvh;
+    }
 }

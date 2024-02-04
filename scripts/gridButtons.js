@@ -6,6 +6,12 @@ let list = {
     2:'TwoInRow' ,
     3:'ThreeInRow'
 }
+const Directionist = (direction) => {
+    document.querySelectorAll('.tovar').forEach(element => {
+        element.style.flexDirection = direction;
+})
+}
+Directionist("Row")
 for(let i = 0; i < gridButtons.length;i++){
     gridButtons[i].addEventListener("click", () => {
         for(let j = 0; j < gridButtons.length;j ++ ){
@@ -16,10 +22,11 @@ for(let i = 0; i < gridButtons.length;i++){
         for(let o = 1; o <= gridButtons.length;o++){
             if(Pushed.classList.contains(list[o])){
                 if(o == 1){
-                    document.querySelectorAll('.tovar').forEach(element => {
-                        element.style.flexDirection = "row";
-                    })
+                    Directionist("row")
                 }
+                else{
+                   Directionist("column");
+            }
                 Grid.style.gridTemplateColumns = `repeat(${o},1fr)`;
             }
         }
