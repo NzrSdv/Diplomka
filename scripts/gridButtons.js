@@ -1,3 +1,24 @@
+const Directionist = (direction) => {
+    document.querySelectorAll('.tovar').forEach(element => {
+        element.style.flexDirection = direction;
+})
+}
+window.addEventListener("resize",() => {
+    if(window.innerWidth < 1000){
+        if(gridButtons[2].classList.contains("Pushed")){
+        gridButtons[0].classList.remove("Pushed");
+        gridButtons[1].classList.add("Pushed");
+        }
+    }
+    if(window.innerWidth < 700){
+        Directionist("row");
+        Grid.style.gridTemplateColumns = "repeat(1,1fr)";
+        gridButtons[2].classList.remove("Pushed");
+        gridButtons[1].classList.remove("Pushed");
+        gridButtons[0].classList.add("Pushed");
+    }
+})
+
 let gridButtons = document.querySelector(".gridButtons").children;
 let Grid = document.querySelector(".Grid");
 let Pushed;
@@ -5,11 +26,6 @@ let list = {
     1:'Rows' ,
     2:'TwoInRow' ,
     3:'ThreeInRow'
-}
-const Directionist = (direction) => {
-    document.querySelectorAll('.tovar').forEach(element => {
-        element.style.flexDirection = direction;
-})
 }
 Directionist("Row")
 for(let i = 0; i < gridButtons.length;i++){

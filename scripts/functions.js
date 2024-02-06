@@ -8,8 +8,6 @@ function signCheck(){
         personStyles(false);
         localStorage['Signed'] = false;
     }}
-
-
 function personStyles(isIn){
     let person = document.querySelector(".Person");
     let labelka = document.querySelector(".Name");
