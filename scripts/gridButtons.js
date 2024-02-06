@@ -6,8 +6,9 @@ const Directionist = (direction) => {
 window.addEventListener("resize",() => {
     if(window.innerWidth < 1000){
         if(gridButtons[2].classList.contains("Pushed")){
-        gridButtons[0].classList.remove("Pushed");
+            gridButtons[2].classList.remove("Pushed");
         gridButtons[1].classList.add("Pushed");
+        Grid.style.gridTemplateColumns = "repeat(2,1fr)";
         }
     }
     if(window.innerWidth < 700){

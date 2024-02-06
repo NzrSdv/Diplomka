@@ -171,7 +171,7 @@ button{
 }
 @media (max-width:1000px){
     .Grid{
-    grid-auto-rows: minmax(auto,300px);
+    grid-auto-rows: minmax(auto,350px);
     }
     .ThreeInRow{
         display: none;
@@ -183,6 +183,7 @@ button{
     }
     .Grid{
         grid-auto-rows: minmax(auto,200px);
+        gap: 5px;
     }
     .tovar{
         font-size: .2rem;
