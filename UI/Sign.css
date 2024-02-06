@@ -65,7 +65,7 @@ button{
     color:var(--accent-900);
     transition:ease .2s all;
 }
-#SignIn:hover{
+#SignUp:hover{
     background-color: var(--main-200);
 }
 

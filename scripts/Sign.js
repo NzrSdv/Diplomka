@@ -17,9 +17,21 @@ inputs.forEach((element) => {
 
 let SignUpButton = document.getElementById("SignUp");
 SignUpButton.addEventListener("click", () =>{
+    let accept = true;
     inputs.forEach(element => {
-        localStorage.setItem(element.id,element.value);
+        if(element.value.length <= 3){
+            console.log("malo");
+            accept = false;
+        }
+        else{
+            localStorage.setItem(element.id,element.value);
+        }
     })
-    localStorage['Signed'] = true;
-    window.location.href = 'index.html';
+    if (accept == true){
+        localStorage['Signed'] = true;
+        window.location.href = 'index.html';
+    }
+    else{
+        return;
+    }
 })

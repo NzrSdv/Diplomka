@@ -13,88 +13,129 @@
     src: url("../media/Fonts/Montserrat/static/Montserrat-Regular.ttf") format('truetype');
 }
 *{
-    font-family: 'Montserrat';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+body {
     background:var(--main-100);
+    padding:10px;
+    gap:30px;
+    color:var(--accent-900);
+}
+body > *{
+    font-family: 'Montserrat';
 }
 #MainPage{
     display: flex;
     flex-direction: column;
-    gap:30px;
     justify-content: space-evenly;
     align-items: center;
-    padding:10px;
 }
 main{
-    width:var(--windowWidth);
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:var(--accent-900);
-}
-.element{
-    width:var(--windowWidth);
-    height: 450px;
+    min-height: 80dvh;
+    width: var(--windowWidth);
+    background-color: var(--main-300);
     border-radius: var(--borderRadius);
-    overflow: hidden;
-    background-color: var(--main-300); 
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: start;
-    padding: 5px;
+    align-items: stretch;
+    padding: 10px 15px;
 }
-.label{
-    justify-self: start;
-}
-.ScrollMenu{
+.up{
     width: 100%;
-    height: 80%;
     display: flex;
-    gap:50px;
-    align-items: center;
-    overflow-x: auto;
-    padding:0 50px 20px;
-}
-.tovar{
-    border: 2px solid var(--accent-900);
-    border-radius: var(--borderRadius);
-    height: 100%;
-    aspect-ratio: 3/5;
-    display: grid;
-    grid-template: 4fr 1fr/1fr;
-    cursor:default;
-}
-.Top{
-    grid-column: 1/3;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
-.Bottom{
-    grid-area:2/1/3/2 ;
+    border-bottom: 2px solid var(--main-200);
+} 
+.gridButtons{
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.gridButtons > button{
+   height: 8dvh;
+    aspect-ratio: 1;
+    border:2px solid var(--main-200);
+    border-radius: calc(var(--borderRadius));
+    align-items: center;
+    transition: ease .2s;
+}
+button{
+    background:var(--main-300)
+}
+.gridButtons button:hover{
+    background: var(--main-200);
+}
+.Rows .icon{
+    aspect-ratio: 1;
+    background:var(--accent-900);
+    mask:url(../media/SVGS/GridOne.svg) no-repeat center;
+    mask-size: calc(var(--maskSize) * 1.1);
+    border: 5px solid var(--main-200);
+}
+.TwoInRow .icon{
+    aspect-ratio: 1;
+    background:var(--accent-900);
+    mask:url(../media/SVGS/GridTwo.svg) no-repeat center;
+    mask-size: calc(var(--maskSize) * 1.1);
+    border: 5px solid var(--main-200);
+}
+.ThreeInRow .icon{
+    aspect-ratio: 1;
+    background:var(--accent-900);
+    mask:url(../media/SVGS/GridThree.svg) no-repeat center;
+    mask-size: calc(var(--maskSize) * 1.1);
+    border: 5px solid var(--main-200);
+}
+.Pushed{
+    background: var(--main-200);
+}
+.Grid{
+    display: grid;
+    width: 100%;
+    min-height: 60dvh;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding:10px 0;
+    grid-auto-rows: minmax(200px,450px);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+.tovar{
+    height:90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border-top: 2px solid var(--accent-900);
+    border: 2px solid var(--main-200);
+    border-radius: var(--borderRadius);
+    box-sizing: content-box;
+}
+.Top{
+    height: 60%;
 }
 .imgshka{
-    margin-top: 20px;
-    width: 90%;
+    max-height: 90%;
     align-self: center;
     aspect-ratio: 1;
     background:var(--accent-800);
     border-radius: var(--borderRadius);
-    border:solid 5px var(--main-200);
+    border:solid 2px var(--main-200);
     cursor:default;
 }
-.productLabel{
+.Bottom{
+    font-size: clamp(.9rem,1rem,1.3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.productLabel{  
     padding: 20px 0;
 }
 .addicon{
@@ -105,15 +146,46 @@ main{
     align-self: center;
     border: 5px solid var(--main-200);
 }
+.bottomRow{
+    padding:10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .Add{
     aspect-ratio: 1;
-    height: 70%;
-    border-radius: calc(var(--borderRadius) * 1.5);
+    height:40px;
+    border-radius: calc(var(--borderRadius));
     background:var(--main-300);
     outline: none;
     border: 2px solid var(--main-200);
+    transition: ease .2s;
+}
+.Add:hover{
+    
+    background-color: var(--main-200);    
 }
 .text{
     align-self: center;
     text-align: center;
+}
+@media (max-width:1000px){
+    .Grid{
+    grid-auto-rows: minmax(auto,300px);
+    }
+    .ThreeInRow{
+        display: none;
+    }
+}
+@media (max-width:700px) {
+    .gridButtons{
+        display: none;
+    }
+    .Grid{
+        grid-auto-rows: minmax(auto,200px);
+    }
+    .tovar{
+        font-size: .2rem;
+        max-height:20dvh;
+    }
 }

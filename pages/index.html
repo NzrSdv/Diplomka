@@ -11,39 +11,74 @@
 <body id="MainPage" onload="signCheck()">
     <header>
         <div class="Left">
-            <div id="Person"></div>
-            <h5 id="Name">Войти</h5>
+            <div class="Person"></div>
+            <h5 class="Name">Войти</h5>
         </div>
         <div class="Right">
-            <div id="Search">
-                <div class="SearchIcon"></div>
-            </div>
             <div id="Cart">
                 <div class="CartIcon"></div>
             </div>
         </div>
     </header>
-
     <main>
-        <div class="element">
-            <h2 class="label">Продукты питания</h2>
-            <div class="ScrollMenu">
+            <div class="up">
+                <div class="Left"> 
+                <div class="Search">
+                    <div class="SearchIcon"></div>
+                </div></div>
+                <div class="Right">
+                    <div class="gridButtons">
+                        <button class="Rows Pushed">
+                            <div class="icon"></div>
+                        </button>
+                        <button class="TwoInRow">
+                            <div class="icon"></div>
+                        </button>
+                        <button class="ThreeInRow">
+                            <div class="icon"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="Grid">
                 <div class="tovar">
                     <div class="Top">
                          <img src="https://www.thecornishfoodboxcompany.co.uk/media/catalog/product/e/w/ew20220614_cornishfoodbox-v1-1x1-15_meat_box_large_small_3.jpg?width=265&height=265&store=default&image-type=image" class="imgshka">
-                         <h4 class="productLabel">Говядина</h4>
                      </div>
                      <div class="Bottom">
-                         <button class="Add">
-                             <div class="addicon"></div>
-                         </button>
-                         <h4 class="text">Приобрести</h4>
-                     </div>
-                 </div>
+                         <h4 class="productLabel">Говядина</h4>
+                         <h4 class="text">Цена</h4>
+                         <div class="bottomRow">
+                            <button class="Add">
+                                <div class="addicon"></div>
+                            </button>
+                            <h4 class="text">Приобрести</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tovar">
+                        <div class="Top">
+                             <img src="https://www.thecornishfoodboxcompany.co.uk/media/catalog/product/e/w/ew20220614_cornishfoodbox-v1-1x1-15_meat_box_large_small_3.jpg?width=265&height=265&store=default&image-type=image" class="imgshka">
+                         </div>
+                         <div class="Bottom">
+                             <h4 class="productLabel">Говядина</h4>
+                            <div class="Center">
+                                <h4 class="text">Цена </h4>
+                            </div>
+                             <div class="bottomRow">
+                                <button class="Add">
+                                    <div class="addicon"></div>
+                                </button>
+                                <h4 class="text">Приобрести</h4>
+                                </div>
+                            </div>
+                        </div> 
+                </div> 
+
             </div>
-            
-        </div>
     </main>
     <script src="../scripts/index.js"></script>
+    <script src="../scripts/functions.js"></script>
+    <script src="../scripts/gridButtons.js"></script>
 </body>
 </html>

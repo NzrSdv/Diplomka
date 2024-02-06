@@ -6,9 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../UI/styles.css">
+    <link rel="stylesheet" href="../UI/header.css">
     <link rel="stylesheet" href="../UI/Person.css">
 </head>
-<body>
-    
+<body onload="Zapolnenie()">
+    <header>
+        <div class="Left">
+            <div class="Person"></div>
+            <h5 class="Name"></h5>
+        </div>
+        <div class="Right">
+            <div class="Home" onclick="Home()">
+                <div class="icon"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <ul id = "PersonList">
+            <li class = "stroka"></li>
+            <li class = "stroka"></li>
+            <li class = "stroka"></li>
+        </ul>
+    </main>
+
+    <script src="../scripts/Person.js"></script>
+    <script src="../scripts/functions.js"></script>
 </body>
 </html>
