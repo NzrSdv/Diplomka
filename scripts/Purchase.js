@@ -20,22 +20,22 @@ class CartProduct extends Product{
     
 }
 
-import {fs} from "../node_modules/fs";
-fs.readFile('../textic.txt',(error,data) => {
-    try{console.log(data.toString())}
-    catch{console.log(error)}
-})
-console.log("hi")
-
-
-// let adding = document.querySelectorAll(".Add")
-// adding.forEach(element => {
-//     element.addEventListener("click",() => {
-//         console.log(element.parentElement.parentElement.children[0].textContent)
-//     })
+// import {fs} from "../node_modules/fs";
+// fs.readFile('../textic.txt',(error,data) => {
+//     try{console.log(data.toString())}
+//     catch{console.log(error)}
 // })
+// console.log("hi")
 
-// const Beef = new Product("Beef",1000,"../media/Svgs/HomeIco.svg");
+
+let adding = document.querySelectorAll(".Add")
+adding.forEach(element => {
+    element.addEventListener("click",() => {
+        console.log(element.parentElement.parentElement.children[0].textContent)
+    })
+})
+
+const Beef = new Product("Beef",1000,"../media/Svgs/HomeIco.svg");
 
 // document.addEventListener("load",() => {
 

@@ -98,7 +98,7 @@ button{
     width: 100%;
     min-height: 60dvh;
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 5px;
     padding:10px 0;
     grid-auto-rows: minmax(200px,450px);
     justify-content: center;
@@ -120,7 +120,7 @@ button{
     height: 60%;
 }
 .imgshka{
-    max-height: 90%;
+    max-height: 80%;
     align-self: center;
     aspect-ratio: 1;
     background:var(--accent-800);
@@ -173,9 +173,11 @@ button{
     .Grid{
     grid-auto-rows: minmax(auto,350px);
     }
-    .ThreeInRow{
-        display: none;
-    }
+    .tovar{
+        font-size: .2rem;
+        max-height:max(25dvh,40dvw);
+        padding: 15px 0px;
+    } 
 }
 @media (max-width:700px) {
     .gridButtons{
@@ -184,9 +186,5 @@ button{
     .Grid{
         grid-auto-rows: minmax(auto,200px);
         gap: 5px;
-    }
-    .tovar{
-        font-size: .2rem;
-        max-height:20dvh;
     }
 }
