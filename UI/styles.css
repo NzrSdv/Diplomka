@@ -98,7 +98,7 @@ button{
     width: 100%;
     min-height: 60dvh;
     grid-template-columns: 1fr;
-    gap: 5px;
+    gap: min(5dvh,3dvw);
     padding:10px 0;
     grid-auto-rows: minmax(200px,450px);
     justify-content: center;
@@ -106,7 +106,7 @@ button{
     align-items: center;
 }
 .tovar{
-    height:90%;
+    height:min(80%,400px);
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -117,10 +117,14 @@ button{
     box-sizing: content-box;
 }
 .Top{
+    aspect-ratio: 1;
     height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .imgshka{
-    max-height: 80%;
+    max-height:min(80%,350px);
     align-self: center;
     aspect-ratio: 1;
     background:var(--accent-800);
@@ -172,11 +176,12 @@ button{
 @media (max-width:1000px){
     .Grid{
     grid-auto-rows: minmax(auto,350px);
+    column-gap:max(10dvh,15dvw);
     }
     .tovar{
         font-size: .2rem;
         max-height:max(25dvh,40dvw);
-        padding: 15px 0px;
+        padding: 12px 0px;
     } 
 }
 @media (max-width:700px) {
@@ -185,6 +190,5 @@ button{
     }
     .Grid{
         grid-auto-rows: minmax(auto,200px);
-        gap: 5px;
     }
 }
