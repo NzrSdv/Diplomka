@@ -26,6 +26,18 @@ body {
 body > *{
     font-family: 'Montserrat';
 }
+.addWindow{
+    width: 100dvw;
+    height: 100dvh;
+    position:fixed;
+    right:0;
+    bottom: 0;
+    box-shadow: inset 0px 0px 0px 50dvw rgba(0, 0, 0, .6);
+    display: none;
+    /* background-color: rgba(, , ,); */
+    /* z-index: 2; */
+    /* display: none; */
+}
 #MainPage{
     display: flex;
     flex-direction: column;

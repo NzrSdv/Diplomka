@@ -19,11 +19,14 @@ class CartProduct extends Product{
     };
     
 }
-// let adding = document.querySelectorAll(".Add")
-// adding.forEach(element => {
-//     element.addEventListener("click",() => {
-//         console.log(element.parentElement.parentElement.children[0].textContent)
-//     })
-// })
+let adding = document.querySelectorAll(".Add")
+adding.forEach(element => {
+    element.addEventListener("click",() => {
+        let tovar = element.parentElement.parentElement;
+        let url = tovar.parentElement.children[0].children[0].attributes.src.value;
+        let name = tovar.children[0].textContent;
+        let cost = tovar.children[1].textContent;
+        console.log([url,name,cost])
+    })
+})
 
-const Beef = new Product("Beef",1000,"../media/Svgs/HomeIco.svg");

@@ -47,8 +47,9 @@ function CartCheck(){
         let text = document.createElement('h2');
         text.classList.add("text");
         let grid = document.querySelector(".Grid");
+        grid.innerHTML = " ";
         grid.appendChild(text);
-        grid.children[0].textContent = "тут пока ничего нет..."; 
+        grid.children[0].textContent = "тут пока ничего нет...";
     }
     else{
         console.log(JSON.parse(localStorage.getItem("Cart")))

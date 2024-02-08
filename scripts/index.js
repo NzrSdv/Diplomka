@@ -29,11 +29,11 @@ CartBtn.addEventListener("click", () => {
 }
 let Labels = ["Говядина","Курица","Селедка","Молоко","Хлеб","Мороженное","Огурцы","Помидоры","Лук"];
 let costik = [1000,800,1400,200,100,150,80,85,60];
-let urlki = ["../media/Imgs/beefKg.jpg","../media/IMgs/chickenKg.webp",
-"../media/IMgs/HerringKg.webp","../media/IMgs/MilkLitr.webp",
-"../media/IMgs/breadShtuk.jpg","../media/IMgs/icecreamShtuk.jpg",
-"../media/IMgs/cucumberShtuk.webp","../media/IMgs/tomatoShtuk.jpg",
-"../media/IMgs/onionShtuk.jpg"]
+let urlki = ["../media/Imgs/beefKg.jpg","../media/imgs/chickenKg.webp",
+"../media/imgs/HerringKg.webp","../media/imgs/MilkLitr.webp",
+"../media/imgs/breadShtuk.jpg","../media/imgs/icecreamShtuk.jpg",
+"../media/imgs/cucumberShtuk.webp","../media/imgs/tomatoShtuk.jpg",
+"../media/imgs/onionShtuk.jpg"]
 
 function Vnutr(){
     let Grid = document.querySelector(".Grid");
