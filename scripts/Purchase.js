@@ -7,7 +7,7 @@ class Product{
 }
 
 class CartProduct extends Product{
-    constructor(Name,Cost,ImgUrl){
+    constructor(Name,Cost){
         super(Name,Cost)
         this.quantity = 1;
     }
@@ -19,24 +19,11 @@ class CartProduct extends Product{
     };
     
 }
-
-// import {fs} from "../node_modules/fs";
-// fs.readFile('../textic.txt',(error,data) => {
-//     try{console.log(data.toString())}
-//     catch{console.log(error)}
+// let adding = document.querySelectorAll(".Add")
+// adding.forEach(element => {
+//     element.addEventListener("click",() => {
+//         console.log(element.parentElement.parentElement.children[0].textContent)
+//     })
 // })
-// console.log("hi")
-
-
-let adding = document.querySelectorAll(".Add")
-adding.forEach(element => {
-    element.addEventListener("click",() => {
-        console.log(element.parentElement.parentElement.children[0].textContent)
-    })
-})
 
 const Beef = new Product("Beef",1000,"../media/Svgs/HomeIco.svg");
-
-// document.addEventListener("load",() => {
-
-// })

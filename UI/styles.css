@@ -127,10 +127,11 @@ button{
     max-height:min(80%,350px);
     align-self: center;
     aspect-ratio: 1;
-    background:var(--accent-800);
+    background:white;
     border-radius: var(--borderRadius);
     border:solid 2px var(--main-200);
     cursor:default;
+    object-fit:contain;
 }
 .Bottom{
     font-size: clamp(.9rem,1rem,1.3rem);
