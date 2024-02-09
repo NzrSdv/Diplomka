@@ -54,7 +54,6 @@ function CartCheck(){
     else{
         let CartJson = JSON.parse(localStorage.getItem("Cart"));
         for(let i = 0; i < CartJson.Cart.length;i++){
-            console.log(CartJson.Cart[i]);
             grid.innerHTML += `<div class="tovar">
             <div class="Top">
                  <img src="${CartJson.Cart[i].TovarUrl}" class="imgshka">
@@ -63,7 +62,7 @@ function CartCheck(){
                  <h4 class="productLabel">${CartJson.Cart[i].TovarName}</h4>
                  <h4 class="text">${CartJson.Cart[i].TovarCost}₸</h4>
                  <div class="bottomRow">
-                    <button class="Add">
+                    <button class="Add Deletim">
                         <div class="addicon delete"></div>
                     </button>
                     <h4 class="text">Удалить</h4>
