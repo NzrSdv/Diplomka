@@ -19,14 +19,45 @@ class CartProduct extends Product{
     };
     
 }
-let adding = document.querySelectorAll(".Add")
+let adding = document.querySelectorAll(".Add");
+let addBox = document.querySelector(".addBox");
+let addWindow = document.querySelector(".addWindow");
+let purchase = document.querySelector(".purchase");
+let costka;
+purchase.addEventListener("click", () => {
+    addWindow.style.display = "none";
+})
 adding.forEach(element => {
     element.addEventListener("click",() => {
-        let tovar = element.parentElement.parentElement;
-        let url = tovar.parentElement.children[0].children[0].attributes.src.value;
-        let name = tovar.children[0].textContent;
-        let cost = tovar.children[1].textContent;
-        console.log([url,name,cost])
+        addWindow.style.display = "flex";
+        let list = element.getAttribute("data-list").split(",");
+        console.log(list);
+    addBox.querySelector(".imgshka").src = list[0];
+        Tname.textContent = list[1];
+        TCost.textContent = list[2];
+        costka = list[2];
+        
+        Tquan.textContent = 1;
+        quen = 1;
+
     })
 })
 
+let Tname = document.querySelector(".TovarName");
+let TCost = document.querySelector(".TovarCost");
+let Tquan = document.querySelector(".TovarQuant");
+let quen = Number(Tquan.textContent);
+
+function Plusuem(){
+    console.log(costka)
+    Tquan.textContent = quen + 1;
+    quen = Number(Tquan.textContent);
+    TCost.textContent = quen * costka;
+}
+function Minusuem(){
+    if(Number(Tquan.textContent) > 1){
+        Tquan.textContent = quen - 1;
+        quen = Number(Tquan.textContent);
+        TCost.textContent  = quen * costka;
+    }
+}

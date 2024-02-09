@@ -34,9 +34,54 @@ body > *{
     bottom: 0;
     box-shadow: inset 0px 0px 0px 50dvw rgba(0, 0, 0, .6);
     display: none;
-    /* background-color: rgba(, , ,); */
-    /* z-index: 2; */
-    /* display: none; */
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.addBox{
+    width: 85%;
+    height: 65%;
+    background-color: var(--main-300);
+    border-radius: var(--borderRadius);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:30px 10px;
+}
+.addBox > .imgshka{
+    height: 60%;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80%;
+    width: 60%;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    width: 15%;
+    justify-content: space-between;
+}
+.buttons > button , .purchase{
+    color:white;
+    font-size: large;
+    aspect-ratio:1 ;
+    height:50px;
+    border: 2px solid var(--main-200);
+    border-radius: var(--borderRadius);
+    transition: ease .2s;
+}
+.buttons > button:hover, .purchase:hover{
+    background-color: var(--main-200);
+}
+.purchase{
+    text-align: center;
+    height: max-content;
+    padding:5px 15px;
 }
 #MainPage{
     display: flex;
@@ -195,7 +240,7 @@ button{
         font-size: .2rem;
         max-height:max(25dvh,40dvw);
         padding: 12px 0px;
-    } 
+    }
 }
 @media (max-width:700px) {
     .gridButtons{
@@ -203,5 +248,21 @@ button{
     }
     .Grid{
         grid-auto-rows: minmax(auto,200px);
+    }
+    .buttons{
+        align-self: center;
+        height: 30%;
+        width: 70%;
+    }
+    .buttons > button, .purchase{
+        height: 40px;
+        padding:5px 10px;
+    }
+    .addBox{
+        flex-direction: column; 
+        height: 40%;
+    }
+    .addbox > .imgshka{
+        height: 100px;
     }
 }

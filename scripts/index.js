@@ -29,11 +29,11 @@ CartBtn.addEventListener("click", () => {
 }
 let Labels = ["Говядина","Курица","Селедка","Молоко","Хлеб","Мороженное","Огурцы","Помидоры","Лук"];
 let costik = [1000,800,1400,200,100,150,80,85,60];
-let urlki = ["../media/Imgs/beefKg.jpg","../media/imgs/chickenKg.webp",
-"../media/imgs/HerringKg.webp","../media/imgs/MilkLitr.webp",
-"../media/imgs/breadShtuk.jpg","../media/imgs/icecreamShtuk.jpg",
-"../media/imgs/cucumberShtuk.webp","../media/imgs/tomatoShtuk.jpg",
-"../media/imgs/onionShtuk.jpg"]
+let urlki = ["../media/Imgs/beefKg.jpg","../media/Imgs/chickenKg.webp",
+"../media/Imgs/HerringKg.webp","../media/Imgs/MilkLitr.webp",
+"../media/Imgs/breadShtuk.jpg","../media/Imgs/icecreamShtuk.jpg",
+"../media/Imgs/cucumberShtuk.webp","../media/Imgs/tomatoShtuk.jpg",
+"../media/Imgs/onionShtuk.jpg"]
 
 function Vnutr(){
     let Grid = document.querySelector(".Grid");
@@ -45,11 +45,11 @@ function Vnutr(){
          <div class="Bottom">
              <h4 class="productLabel">${Labels[i]}</h4>
              <h4 class="text">${costik[i]}₸</h4>
-             <div class="bottomRow">
-                <button class="Add">
+             <div class="bottomRow" >
+                <button class="Add" data-list = "${urlki[i]},${Labels[i]},${costik[i]}">
                     <div class="addicon"></div>
                 </button>
-                <h4 class="text">Приобрести</h4>
+                <h4 class="text">В корзину</h4>
                 </div>
             </div>
         </div>`;
