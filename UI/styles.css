@@ -279,10 +279,13 @@ footer{
     .addBox{
         flex-direction: column;
         gap:10px; 
-        height: 60%;
+        height: 70%;
     }
     .addbox > .imgshka{
         height: 100px;
+    }
+    .buttons > button, .purchase{
+        font-size: small;
     }
     footer{
         height: 40dvh;
