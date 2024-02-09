@@ -42,7 +42,7 @@ body > *{
     z-index: 10;
 }
 .addBox{
-    width: 85%;
+    width: 55%;
     height: 65%;
     background-color: var(--main-300);
     border-radius: var(--borderRadius);
@@ -279,10 +279,13 @@ footer{
     .addBox{
         flex-direction: column;
         gap:10px; 
-        height: 60%;
+        height: 70%;
     }
     .addbox > .imgshka{
         height: 100px;
+    }
+    .buttons > button, .purchase{
+        font-size: small;
     }
     footer{
         height: 40dvh;

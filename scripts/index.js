@@ -5,9 +5,7 @@ const SearchBtn = document.querySelector("#Search");
 const CartBtn = document.querySelector("#Cart");
 
 ProfileBtn.addEventListener('click',() => {
-    console.log("CLICK");
     let status = localStorage.getItem("Signed")
-    console.log(status)
     if(status == "true"){
         window.location.href = "Person.html";
     }

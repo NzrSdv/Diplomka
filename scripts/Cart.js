@@ -72,3 +72,11 @@ document.querySelector('#SearchInpTwo').addEventListener("input", function(){
 function InsertMark(string,pos,len){
     return string.slice(0,pos) + '<mark>' + string.slice(pos,pos + len) + '</mark>' + string.slice(pos+len);
 }
+let DeleteWindow = document.querySelector(".deleteWindow")
+let deletim = document.querySelectorAll(".Add");
+
+deletim.forEach(element => {
+    element.addEventListener("click",() => {
+        console.log("a")
+    });
+})
