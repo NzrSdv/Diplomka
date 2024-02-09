@@ -17,6 +17,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.tovar.Hide{
+    display: none;
+}
 body {
     background:var(--main-100);
     padding:10px;
@@ -166,7 +169,7 @@ button{
     height:min(80%,400px);
     width: 90%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     border: 2px solid var(--main-200);
@@ -175,7 +178,7 @@ button{
 }
 .Top{
     aspect-ratio: 1;
-    height: 60%;
+    height: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,6 +202,9 @@ button{
 }
 .productLabel{  
     padding: 20px 0;
+}
+.delete{
+    transform: rotate(45deg);
 }
 .addicon{
     aspect-ratio: 1;
@@ -231,6 +237,14 @@ button{
     align-self: center;
     text-align: center;
 }
+
+footer{
+    width: 100%;
+    height: 60dvh;
+    background: var(--main-300);
+    border-radius: var(--borderRadius);
+}
+
 @media (max-width:1000px){
     .Grid{
     grid-auto-rows: minmax(auto,350px);
@@ -254,15 +268,23 @@ button{
         height: 30%;
         width: 70%;
     }
-    .buttons > button, .purchase{
-        height: 40px;
+    .buttons > button{
+        height: 50px;
         padding:5px 10px;
     }
+    .purchase{
+        padding:5px;
+        height: 30%;
+    }
     .addBox{
-        flex-direction: column; 
-        height: 40%;
+        flex-direction: column;
+        gap:10px; 
+        height: 60%;
     }
     .addbox > .imgshka{
         height: 100px;
+    }
+    footer{
+        height: 40dvh;
     }
 }

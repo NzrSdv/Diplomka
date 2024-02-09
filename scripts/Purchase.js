@@ -24,15 +24,16 @@ let addBox = document.querySelector(".addBox");
 let addWindow = document.querySelector(".addWindow");
 let purchase = document.querySelector(".purchase");
 let costka;
-purchase.addEventListener("click", () => {
-    addWindow.style.display = "none";
-})
+let TUrl; 
+
+
 adding.forEach(element => {
     element.addEventListener("click",() => {
         addWindow.style.display = "flex";
         let list = element.getAttribute("data-list").split(",");
         console.log(list);
     addBox.querySelector(".imgshka").src = list[0];
+    TUrl = list[0];
         Tname.textContent = list[1];
         TCost.textContent = list[2];
         costka = list[2];
@@ -47,6 +48,7 @@ let Tname = document.querySelector(".TovarName");
 let TCost = document.querySelector(".TovarCost");
 let Tquan = document.querySelector(".TovarQuant");
 let quen = Number(Tquan.textContent);
+console.log(TUrl);
 
 function Plusuem(){
     console.log(costka)
@@ -61,3 +63,36 @@ function Minusuem(){
         TCost.textContent  = quen * costka;
     }
 }
+
+purchase.addEventListener("click", () => {
+
+    // Tname.textContent TCost.textContent Tquan.textContent
+    if(localStorage.getItem("Cart") == null){
+        let CartObject = {
+            Total:TCost.textContent,
+            Cart:[{TovarName:Tname.textContent,
+            TovarCost:Number(TCost.textContent),
+            TovarQuantity:Number(Tquan.textContent),
+            TovarUrl:TUrl
+            }]
+        }
+        localStorage.setItem("Cart",JSON.stringify(CartObject))
+    }
+    else{
+        let CartJson = JSON.parse(localStorage.getItem("Cart"));
+        console.log(CartJson.Total);
+        let CartObject = {
+            Total:Number(TCost.textContent) + Number(CartJson.Total),
+            Cart:[...CartJson.Cart,
+                {TovarName:Tname.textContent,
+            TovarCost:Number(TCost.textContent),
+            TovarQuantity:Number(Tquan.textContent),
+            TovarUrl:TUrl
+            }]
+        }
+        console.log(Cart)
+        localStorage.setItem("Cart",JSON.stringify(CartObject))
+    }
+    addWindow.style.display = "none";
+
+})

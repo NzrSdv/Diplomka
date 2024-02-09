@@ -43,15 +43,33 @@ function Home(){
     
 function CartCheck(){
     personStyles(true);
+    let grid = document.querySelector(".Grid");
+    grid.innerHTML = " ";
     if(localStorage.getItem("Cart") == null){
         let text = document.createElement('h2');
         text.classList.add("text");
-        let grid = document.querySelector(".Grid");
-        grid.innerHTML = " ";
         grid.appendChild(text);
         grid.children[0].textContent = "тут пока ничего нет...";
     }
     else{
-        console.log(JSON.parse(localStorage.getItem("Cart")))
+        let CartJson = JSON.parse(localStorage.getItem("Cart"));
+        for(let i = 0; i < CartJson.Cart.length;i++){
+            console.log(CartJson.Cart[i]);
+            grid.innerHTML += `<div class="tovar">
+            <div class="Top">
+                 <img src="${CartJson.Cart[i].TovarUrl}" class="imgshka">
+             </div>
+             <div class="Bottom">
+                 <h4 class="productLabel">${CartJson.Cart[i].TovarName}</h4>
+                 <h4 class="text">${CartJson.Cart[i].TovarCost}₸</h4>
+                 <div class="bottomRow">
+                    <button class="Add">
+                        <div class="addicon delete"></div>
+                    </button>
+                    <h4 class="text">Удалить</h4>
+                    </div>
+                </div>
+            </div>`;
+        }
     }
 }
