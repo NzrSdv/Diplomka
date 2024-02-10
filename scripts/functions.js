@@ -46,11 +46,13 @@ function CartCheck(){
     let grid = document.querySelector(".Grid");
     grid.innerHTML = " ";
     let CartJson = JSON.parse(localStorage.getItem("Cart"));
+    let VisTotal = document.getElementById("Total");
     if(localStorage.getItem("Cart") == null){
         let text = document.createElement('h2');
         text.classList.add("text");
         grid.appendChild(text);
         grid.children[0].textContent = "тут пока ничего нет...";
+        VisTotal.innerText = "Всего : 0₸";
     }
     else{
         for(let i = 0; i < CartJson.Cart.length;i++){
@@ -68,7 +70,6 @@ function CartCheck(){
             </div>`;
         }
         let Total = CartJson.Total;
-        let VisTotal = document.getElementById("Total");
         VisTotal.innerText = `Всего : ${Total}₸`;
     }
 }
