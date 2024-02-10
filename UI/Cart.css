@@ -4,9 +4,10 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    overflow-x: hidden;
 }
 main{
-    height: 80dvh;
+    min-height: 80dvh;
     background-color: var(--main-300);
     border-radius: var(--borderRadius);
     display: flex;
@@ -18,7 +19,10 @@ main{
 h2{
     align-items: center;
 }
-.deleteWindow{
+.Grid{
+    min-height: 60dvh;
+}
+.deleteWindow ,.buyWindow{
     width: 100dvw;
     height: 100dvh;
     position:fixed;
@@ -30,14 +34,86 @@ h2{
     justify-content: center;
     z-index: 10;
 }
-.deleteBox{
+.buyBox{
+    height: 40%;
+    width: 40%;
+}
+.deleteBox, .buyBox{
     width: 55%;
     height: 65%;
     background-color: var(--main-300);
     border-radius: var(--borderRadius);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    gap:30px;
     align-items: center;
     padding:30px 10px;
+}
+@media (max-width:1000px) {
+    .deleteBox, .buyBox{
+        width: 70%;
+        height: 30%;
+    }
+}
+.up > .Left{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: 0;
+}
+.up > .Left:hover{
+    background-color: transparent;
+}
+.Buttons > button{
+    padding: 10px 15px;
+    color:white;
+    border-radius: var(--borderRadius);
+    border:2px var(--main-200) solid;
+    transition:ease .2s;
+}
+#kupit{
+    background-color: green;
+
+}
+#kupit:hover{
+    background-color: rgb(0, 100, 0);
+}
+#obratno{
+    background:red ;
+}
+#obratno:hover{
+    background-color: rgb(250, 138, 138);
+}
+#yes{
+    background-color: green;
+}
+#yes:hover{
+    background-color: rgb(0, 100, 0);
+}
+#no{
+    background:red ;
+}
+#no:hover{
+    background-color: rgb(250, 138, 138);
+
+}
+.up > .Right >button{
+    border: 2px solid var(--main-200);
+    padding: 10px 15px;
+    border-radius: var(--borderRadius);
+    color:white;
+    transition:ease .2s ;
+}
+#Buy{
+    background-color: green;
+}
+#Buy:hover{
+    background-color: rgb(0, 100, 0);
+}
+#Delete{
+    background:red;
+}
+#Delete:hover{
+    background-color: rgb(250, 138, 138);
 }

@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="../UI/Person.css">
 </head>
 <body onload="Zapolnenie()">
+    <div class="PopolnenieWindow">
+        <div class="PopolnenieBox">
+            <h5>Введите сумму на которю хотите пополнить баланс: </h5>
+            <input type="number" id="BalanceInput">
+            <button id="Insert">Пополнить</button>
+        </div>
+    </div>
     <header>
         <div class="Left">
             <div class="Person"></div>
@@ -26,7 +33,11 @@
             <li class = "stroka"></li>
             <li class = "stroka"></li>
             <li class = "stroka"></li>
+            <li class = "stroka"> 
+            </li>
         </ul>
+        <button id = "Popolnit">Пополнить баланс</button>
+
     </main>
 
     <script src="../scripts/Person.js"></script>

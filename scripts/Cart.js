@@ -1,82 +1,71 @@
 let Grid = document.querySelector(".Grid");
-let gridButtons = document.querySelector(".gridButtons").children;
-let Pushed;
 
 const Directionist = (direction) => {
     document.querySelectorAll('.tovar').forEach(element => {
         element.style.flexDirection = direction;
 })
 }
-document.addEventListener("load",Directionist("row"))
-window.addEventListener("resize",() => {
-    if(window.innerWidth < 1000){
-        Directionist("row");
-        Grid.style.gridTemplateColumns = "repeat(1,1fr)";
-        gridButtons[2].classList.remove("Pushed");
-        gridButtons[1].classList.remove("Pushed");
-        gridButtons[0].classList.add("Pushed");
-    }
-})
-let list = {
-    1:'Rows' ,
-    2:'TwoInRow' ,
-    3:'ThreeInRow'
-}
-if(Grid.firstChild != Grid.lastChild)
-{for(let i = 0; i < gridButtons.length;i++){
-    gridButtons[i].addEventListener("click", () => {
-        for(let j = 0; j < gridButtons.length;j ++ ){
-            gridButtons[j].classList.remove("Pushed");
-        }
-        gridButtons[i].classList.add("Pushed");
-        Pushed = document.querySelector(".Pushed");
-        for(let o = 1; o <= gridButtons.length;o++){
-            if(Pushed.classList.contains(list[o])){
-                if(o == 1){
-                    Directionist("row")
-                }
-                else{
-                   Directionist("column");
-            }
-                Grid.style.gridTemplateColumns = `repeat(${o},1fr)`;
-            }
-        }
-        
-    })
-}}
+Directionist("row");
+Grid.style.gridTemplateColumns = "repeat(1,1fr)";
 
-document.querySelector('#SearchInpTwo').addEventListener("input", function(){
-    let val = this.value.trim().toLowerCase();
-    let Items = document.querySelectorAll( '.productLabel');
-    if(val != ""){
-         Items.forEach(element => {
-            if(element.innerText.toLowerCase().search(val) == -1){
-                element.parentElement.parentElement.classList.add("Hide");
-                element.innerHTML = element.innerText;
-            }else{
-                element.parentElement.parentElement.classList.remove("Hide");
-                let str = element.innerText;
-                element.innerHTML = InsertMark(str,element.innerText.toLowerCase().search(val),val.length)    
-            }
-        })
+let DeleteWindow = document.querySelector(".deleteWindow");
+let DeleteBtn = document.getElementById("Delete");
+DeleteBtn.addEventListener("click",()=>{
+    if(localStorage.getItem("Cart")!= null ){
+        DeleteWindow.style.display = "flex";
     }
     else{
-        Items.forEach(element => {
-            element.parentElement.parentElement.classList.remove('Hide');
-            element.innerHTML = element.innerText;            
-        });
+        alert("Корзина пустая");
     }
-}
-)
+})
 
-function InsertMark(string,pos,len){
-    return string.slice(0,pos) + '<mark>' + string.slice(pos,pos + len) + '</mark>' + string.slice(pos+len);
-}
-let DeleteWindow = document.querySelector(".deleteWindow")
-let deletim = document.querySelectorAll(".Add");
+let BuyWindow = document.querySelector(".buyWindow");
+let BuyButton = document.getElementById("Buy");
+let TotalInBuy = document.querySelector(".Sum");
+let Bal = document.querySelector(".Bal");
+BuyButton.addEventListener("click",() => {
+    if(localStorage.getItem("Cart")!= null ){
+        BuyWindow.style.display = "flex";
+        TotalInBuy.innerHTML = `К оплате : ${JSON.parse(localStorage.getItem("Cart")).Total}₸`;
+        Bal.innerHTML = `Ваш баланс: ${localStorage.getItem("Balance")}₸`;
+    }
+    else{
+        alert("Корзина пустая");
+    }
+})
 
-deletim.forEach(element => {
-    element.addEventListener("click",() => {
-        console.log("a")
-    });
+let kupit = document.getElementById("kupit");
+let obratno = document.getElementById("obratno");
+
+kupit.addEventListener("click",() => {
+    let Totalka = JSON.parse(localStorage.getItem("Cart")).Total;
+    let Balance = localStorage.getItem("Balance");
+    if(Totalka <= Balance ){
+        TotalInBuy.innerHTML = "0₸";
+        localStorage.setItem("Balance",(Balance-Totalka));
+        localStorage.removeItem("Cart");
+        CartCheck();
+    }
+    else{
+        alert("Не достаточно средств");
+    }
+    BuyWindow.style.display = "none";
+
+})
+
+obratno.addEventListener("click", () =>{
+    BuyWindow.style.display = "none";
+})
+
+let No = document.getElementById("no");
+let Yes = document.getElementById("yes");
+
+Yes.addEventListener("click", () => {
+    localStorage.removeItem("Cart");
+    DeleteWindow.style.display = 'none';
+    CartCheck();
+})
+
+No.addEventListener("click",() => {
+    DeleteWindow.style.display = 'none';
 })

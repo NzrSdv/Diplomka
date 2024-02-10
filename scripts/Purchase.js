@@ -11,7 +11,6 @@ adding.forEach(element => {
     element.addEventListener("click",() => {
         addWindow.style.display = "flex";
         let list = element.getAttribute("data-list").split(",");
-        console.log(list);
     addBox.querySelector(".imgshka").src = list[0];
     TUrl = list[0];
         Tname.textContent = list[1];
