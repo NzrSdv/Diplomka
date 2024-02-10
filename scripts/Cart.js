@@ -41,10 +41,10 @@ kupit.addEventListener("click",() => {
     let Totalka = JSON.parse(localStorage.getItem("Cart")).Total;
     let Balance = localStorage.getItem("Balance");
     if(Totalka <= Balance ){
-        TotalInBuy.innerHTML = "0₸";
         localStorage.setItem("Balance",(Balance-Totalka));
         localStorage.removeItem("Cart");
         CartCheck();
+        TotalInBuy.innerHTML = "0₸";
     }
     else{
         alert("Не достаточно средств");

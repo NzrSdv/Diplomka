@@ -247,8 +247,8 @@ button{
 }
 
 footer{
-    width: 100%;
-    height: 10dvh;
+    width: var(--windowWidth);
+    height: 40dvh;
     background: var(--main-300);
     border-radius: var(--borderRadius);
     display: flex;
