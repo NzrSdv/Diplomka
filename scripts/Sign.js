@@ -27,6 +27,7 @@ SignUpButton.addEventListener("click", () =>{
             localStorage.setItem(element.id,element.value);
         }
     })
+    localStorage.setItem("Balance",0);
     if (accept == true){
         localStorage['Signed'] = true;
         window.location.href = 'index.html';

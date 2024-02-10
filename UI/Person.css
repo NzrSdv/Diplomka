@@ -10,6 +10,7 @@ main{
     background-color: var(--main-300);
     border-radius: var(--borderRadius);
     flex-direction: column;
+    align-items:center;
 }
 ul{
     list-style-type: none;
@@ -31,4 +32,65 @@ ul{
 }
 .ToMain:hover{
     background-color: var(--main-200);
+}
+
+.PopolnenieWindow{
+    width: 100dvw;
+    height: 100dvh;
+    position:fixed;
+    right:0;
+    bottom: 0;
+    box-shadow: inset 0px 0px 0px 50dvw rgba(0, 0, 0, .6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+#Popolnit{
+    border: 2px solid var(--main-200);
+    width: 150px;
+    padding: 15px 10px;
+    color:white;
+    border-radius: var(--borderRadius);
+    transition: ease .2s;
+}
+#Popolnit:hover{
+    background-color: var(--main-200);
+}
+.PopolnenieBox{
+    height: 40%;
+    width: 80%;
+    background-color: var(--main-300);
+    border-radius: var(--borderRadius);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    padding:30px 10px;
+}
+.PopolnenieBox > h5{
+    text-align: center;
+}
+#BalanceInput{
+    outline: none;
+    background-color: transparent;
+    color:white;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    width: 40dvw;
+    border:none;
+    border-bottom: 2px solid var(--main-200);
+}
+#Insert{
+    border: 2px solid var(--main-200);
+    background-color: green;
+    width: 150px;
+    padding: 15px 10px;
+    color:white;
+    border-radius: var(--borderRadius);
+    transition: ease .2s;
+}
+#Insert:hover{
+    background-color: rgb(0, 100, 0);
 }

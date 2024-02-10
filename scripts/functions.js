@@ -12,7 +12,7 @@ function personStyles(isIn){
     let person = document.querySelector(".Person");
     let labelka = document.querySelector(".Name");
     if(isIn){
-        labelka.innerText =  localStorage.getItem("Login");
+        labelka.innerText =  `${localStorage.getItem("Balance")}₸`;
         labelka.style.fontSize = "1rem";
         person.style.mask = "url(../media/SVGS/persona.svg) center no-repeat";
     }
@@ -28,10 +28,10 @@ function personStyles(isIn){
 function Zapolnenie(){
     const ulka = document.getElementById("PersonList");
     let List = ulka.children;
-    let keys = ["Login","Password","PhoneNumber"];
+    let keys = ["Login","Password","PhoneNumber","Balance"];
     for(let i = 0; i < List.length; i++){
         List[i].innerHTML = "<h5>"+ keys[i] + " : "+ localStorage.getItem(keys[i]) + "</h5>";
-        signCheck();  
+        signCheck();
     }
 }
 
@@ -45,6 +45,7 @@ function CartCheck(){
     personStyles(true);
     let grid = document.querySelector(".Grid");
     grid.innerHTML = " ";
+    let CartJson = JSON.parse(localStorage.getItem("Cart"));
     if(localStorage.getItem("Cart") == null){
         let text = document.createElement('h2');
         text.classList.add("text");
@@ -52,7 +53,6 @@ function CartCheck(){
         grid.children[0].textContent = "тут пока ничего нет...";
     }
     else{
-        let CartJson = JSON.parse(localStorage.getItem("Cart"));
         for(let i = 0; i < CartJson.Cart.length;i++){
             grid.innerHTML += `<div class="tovar">
             <div class="Top">
@@ -62,13 +62,13 @@ function CartCheck(){
                  <h4 class="productLabel">${CartJson.Cart[i].TovarName}</h4>
                  <h4 class="text">${CartJson.Cart[i].TovarCost}₸</h4>
                  <div class="bottomRow">
-                    <button class="Add Deletim">
-                        <div class="addicon delete"></div>
-                    </button>
-                    <h4 class="text">Удалить</h4>
+                    <h4 class="text">${CartJson.Cart[i].TovarQuantity}шт</h4>
                     </div>
                 </div>
             </div>`;
         }
+        let Total = CartJson.Total;
+        let VisTotal = document.getElementById("Total");
+        VisTotal.innerText = `Всего : ${Total}₸`;
     }
 }
