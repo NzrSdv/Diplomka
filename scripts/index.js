@@ -28,7 +28,7 @@ CartBtn.addEventListener("click", () => {
 let Labels = ["Говядина","Курица","Селедка","Молоко","Хлеб","Мороженное","Огурцы","Помидоры","Лук"];
 let costik = [1000,800,1400,200,100,150,80,85,60];
 let urlki = ["../media/Imgs/beefKg.jpg","../media/Imgs/chickenKg.webp",
-"../media/Imgs/HerringKg.webp","../media/Imgs/MilkLitr.webp",
+"../media/Imgs/herringKg.webp","../media/Imgs/MilkLitr.webp",
 "../media/Imgs/breadShtuk.jpg","../media/Imgs/icecreamShtuk.jpg",
 "../media/Imgs/cucumberShtuk.webp","../media/Imgs/tomatoShtuk.jpg",
 "../media/Imgs/onionShtuk.jpg"]
