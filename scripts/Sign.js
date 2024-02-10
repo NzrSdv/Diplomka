@@ -20,7 +20,7 @@ SignUpButton.addEventListener("click", () =>{
     let accept = true;
     inputs.forEach(element => {
         if(element.value.length <= 3){
-            console.log("malo");
+            alert("В Логине, Пароле или В номере должно быть не меньше 3 символов")
             accept = false;
         }
         else{

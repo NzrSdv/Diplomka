@@ -1,8 +1,3 @@
-const Directionist = (direction) => {
-    document.querySelectorAll('.tovar').forEach(element => {
-        element.style.flexDirection = direction;
-})
-}
 window.addEventListener("resize",() => {
     if(window.innerWidth < 1000){
         Directionist("row");
@@ -13,6 +8,11 @@ window.addEventListener("resize",() => {
     }
 })
 
+const Directionist = (direction) => {
+    document.querySelectorAll('.tovar').forEach(element => {
+        element.style.flexDirection = direction;
+})
+}
 let gridButtons = document.querySelector(".gridButtons").children;
 let Grid = document.querySelector(".Grid");
 let Pushed;
